@@ -4,7 +4,6 @@ VERSION=6.0.0
 AMQ=jboss-a-mq-6.0.0.redhat-009
 DEMO_HOME=./target
 AMQ_HOME=$DEMO_HOME/$AMQ
-SERVER_DIR=$AMQ_HOME/
 SERVER_CONF=$AMQ_HOME/etc
 SRC_DIR=./installs
 PRJ_DIR=./projects/websocket-activemq-camel
