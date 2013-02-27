@@ -81,12 +81,6 @@ cd $PRJ_DIR/feeder
 mvn clean install -DskipTests
 
 echo
-echo Now going to build the Camel project.
-echo
-cd ../camel
-mvn clean install -DskipTests
-
-echo
 echo To get started see the README.md file:
 echo
 cd ../../..
