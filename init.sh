@@ -68,7 +68,7 @@ cp support/users.properties $SERVER_CONF
 
 echo "  - copying updated JBoss A-MQ configuration file fuseamq-websocket.xml from project..."
 echo
-cp projects/websocket-activemq-camel/feeder/src/main/config/activemq-websocket.xml $SERVER_CONF/activemq.xml
+cp projects/websocket-activemq-camel/feeder/src/main/config/fuseamq-websocket.xml $SERVER_CONF/activemq.xml
 
 echo "  - making sure 'a-mq' for server is executable..."
 echo
