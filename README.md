@@ -1,4 +1,7 @@
-# Example showing How to use WebSocket HTML 5 with JBoss A-MQ
+JBoss A-MQ WebSocket HTML 5 Demo Quickstart Guide
+=================================================
+
+Demo based on JBoss A-MQ products.
 
 Setup and Configuration
 -----------------------
