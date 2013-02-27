@@ -1,7 +1,7 @@
 JBoss A-MQ WebSocket HTML 5 Demo Quickstart Guide
 =================================================
 
-Demo based on JBoss A-MQ products.
+Demo based on JBoss A-MQ product.
 
 Setup and Configuration
 -----------------------
