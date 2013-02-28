@@ -52,12 +52,12 @@ if [ -x $AMQ_HOME ]; then
 		# Unzip the JBoss A-MQ instance.
 		echo Unpacking JBoss A-MQ $VERSION
 		echo
-		unzip -q -d target $SRC_DIR/$AMQ_BIN
+		unzip -q -d $DEMO_HOME $SRC_DIR/$AMQ_BIN
 else
 		# Unzip the JBoss A-MQ instance.
 		echo Unpacking new JBoss A-MQ...
 		echo
-		unzip -q -d target $SRC_DIR/$AMQ_BIN
+		unzip -q -d $DEMO_HOME $SRC_DIR/$AMQ_BIN
 fi
 
 
