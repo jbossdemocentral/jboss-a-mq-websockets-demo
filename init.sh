@@ -1,7 +1,8 @@
 #!/bin/sh 
 DEMO="JBoss A-MQ Websocket Demo"
 VERSION=6.0.0
-AMQ=jboss-a-mq-6.0.0.redhat-009
+AMQ=jboss-a-mq-6.0
+AMQ_BIN=jboss-a-mq-6.0.0.GA.zip
 DEMO_HOME=./target
 AMQ_HOME=$DEMO_HOME/$AMQ
 SERVER_CONF=$AMQ_HOME/etc
@@ -17,11 +18,11 @@ echo
 command -v mvn -q >/dev/null 2>&1 || { echo >&2 "Maven is required but not installed yet... aborting."; exit 1; }
 
 # make some checks first before proceeding.	
-if [[ -r $SRC_DIR/$AMQ.tar.gz || -L $SRC_DIR/$AMQ.tar.gz ]]; then
+if [[ -r $SRC_DIR/$AMQ_BIN || -L $SRC_DIR/$AMQ_BIN ]]; then
 		echo JBoss A-MQ sources are present...
 		echo
 else
-		echo Need to download $AMQ.tar.gz package from the Customer Support Portal 
+		echo Need to download $AMQ_BIN package from the Customer Support Portal 
 		echo and place it in the $SRC_DIR directory to proceed...
 		echo
 		exit
@@ -51,14 +52,12 @@ if [ -x $AMQ_HOME ]; then
 		# Unzip the JBoss A-MQ instance.
 		echo Unpacking JBoss A-MQ $VERSION
 		echo
-		tar -zxf $SRC_DIR/$AMQ.tar.gz 
-		mv $AMQ $DEMO_HOME
+		unzip -q -d target $SRC_DIR/$AMQ_BIN
 else
 		# Unzip the JBoss A-MQ instance.
 		echo Unpacking new JBoss A-MQ...
 		echo
-		tar -zxf $SRC_DIR/$AMQ.tar.gz
-	  mv $AMQ	$DEMO_HOME
+		unzip -q -d target $SRC_DIR/$AMQ_BIN
 fi
 
 
