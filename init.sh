@@ -7,7 +7,7 @@ DEMO_HOME=./target
 AMQ_HOME=$DEMO_HOME/$AMQ
 SERVER_CONF=$AMQ_HOME/etc
 SRC_DIR=./installs
-PRJ_DIR=./projects/websocket-activemq-camel
+PRJ_DIR=./projects/jboss-a-mq-websocket-demo
 
 
 echo
@@ -67,7 +67,7 @@ cp support/users.properties $SERVER_CONF
 
 echo "  - copying updated JBoss A-MQ configuration file fuseamq-websocket.xml from project..."
 echo
-cp projects/websocket-activemq-camel/feeder/src/main/config/fuseamq-websocket.xml $SERVER_CONF/activemq.xml
+cp $PRJ_DIR/feeder/src/main/config/fuseamq-websocket.xml $SERVER_CONF/activemq.xml
 
 echo "  - making sure 'a-mq' for server is executable..."
 echo
