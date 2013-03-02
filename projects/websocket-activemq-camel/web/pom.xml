@@ -3,16 +3,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.fusesource.examples.activemq.websocket</groupId>
+        <groupId>org.jboss.a-mq.examples.websocket</groupId>
         <artifactId>project</artifactId>
         <version>1.0</version>
     </parent>
 
-    <groupId>org.fusesource.examples.activemq.websocket</groupId>
+    <groupId>org.jboss.a-mq.examples.websocket</groupId>
     <artifactId>web</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
-    <name>FuseSource :: WebSocket :: ActiveMQ :: Web</name>
+    <name>JBoss A-MQ WebSocket Web</name>
 
     <dependencies>
           <dependency>
