@@ -13,7 +13,7 @@
     <artifactId>trader</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>
-    <name>JBoss A-MQ WebSocket Trader</name>
+    <name>JBoss A-MQ WebSocket Trader Project</name>
 
     <profiles>
         <profile>

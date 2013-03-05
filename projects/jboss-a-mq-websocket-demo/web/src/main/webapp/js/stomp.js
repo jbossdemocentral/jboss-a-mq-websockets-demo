@@ -1,3 +1,4 @@
+
 (function() {
     var Client, Stomp, WebSocketStompMock,
         __hasProp = {}.hasOwnProperty;

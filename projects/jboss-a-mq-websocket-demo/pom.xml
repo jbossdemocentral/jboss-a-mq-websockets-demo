@@ -5,7 +5,7 @@
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-    <name>JBoss A-MQ WebSocket Demo Project</name>
+    <name>JBoss A-MQ Websocket Project</name>
 
     <properties>
         <activemq-version>5.7.0</activemq-version>
