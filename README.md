@@ -40,7 +40,7 @@ See Quick Start Guide in project as ODT and PDF for details on installation. For
 
 - when the JBoss-AMQ console appears, install the activemq-websocket war file. This war file contains the web project and stomp javascript clients used to open communication between the web browser and websocket server running in JBoss A-MQ.
 
-    JBossA-MQ:karaf@root>install -s war:mvn:org.fusesource.examples.activemq.websocket/web/1.0/war\?Webapp-Context=activemq-websocket
+    JBossA-MQ:karaf@root>install -s war:mvn:org.jboss.amq.examples.websocket/web/1.0/war\?Webapp-Context=activemq-websocket
 
 - start Feeder application, which will populate randomly data (stock prices) and publish them in a topic which is the  topic used by websocket to expose the date to the web browser. You will find this in the 'support' directory.
 
