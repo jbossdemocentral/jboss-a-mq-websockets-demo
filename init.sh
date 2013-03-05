@@ -81,7 +81,7 @@ mvn clean install -DskipTests
 echo
 echo To get started see the README.md file:
 echo
-cd ../../..
+cd ../..
 cat README.md
 
 echo Red Hat $DEMO $VERSION Setup Completed.
