@@ -75,7 +75,7 @@ chmod u+x $AMQ_HOME/bin/a-mq
 
 echo Now going to build the Feeder project.
 echo
-cd $PRJ_DIR/feeder
+cd $PRJ_DIR
 mvn clean install -DskipTests
 
 echo
