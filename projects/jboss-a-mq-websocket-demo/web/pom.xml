@@ -60,7 +60,7 @@
                 </executions>
                 <configuration>
                     <keystore>${project.build.directory}/jetty-ssl.keystore</keystore>
-                    <dname>cn=org.jboss.amq.example</dname>
+                    <dname>cn=org.fusesource.example</dname>
                     <keypass>jetty-ws</keypass>
                     <storepass>jetty-ws</storepass>
                     <alias>jetty-ws</alias>
