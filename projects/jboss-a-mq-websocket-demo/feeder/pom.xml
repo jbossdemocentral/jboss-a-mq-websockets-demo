@@ -32,7 +32,7 @@
                                 </goals>
                                 <phase>package</phase>
                                 <configuration>
-                                    <mainClass>org.jboss.a-mq.examples.websocket.feed.JSONFeed</mainClass>
+                                    <mainClass>org.jboss.amq.examples.websocket.feed.JSONFeed</mainClass>
                                 </configuration>
                             </execution>
                         </executions>
