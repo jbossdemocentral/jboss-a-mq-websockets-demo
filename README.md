@@ -52,3 +52,10 @@ See Quick Start Guide in project as ODT and PDF for details on installation. For
 
 - consult stock prices!
 
+
+Released versions
+-----------------
+See the tagged releases for the following verisons of the product:
+
+- v1.0 is initial JBoss A-MQ v6 release.
+
