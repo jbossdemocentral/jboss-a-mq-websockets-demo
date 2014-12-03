@@ -57,5 +57,7 @@ Released versions
 -----------------
 See the tagged releases for the following verisons of the product:
 
+- v1.0 moved to JBoss Demo Central.
+
 - v1.0 is initial JBoss A-MQ v6 release.
 
