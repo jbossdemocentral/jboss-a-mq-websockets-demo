@@ -8,39 +8,24 @@ body {
 }
 
 p, h1, h2, h3, th, td, a {
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 11px;
 }
 
 div.main {
-    background: #66a3c2;
     border: 1px solid #aeb3b6;
     padding: 15px;
     float: left;
-    position: fixed;
     z-index: 99999;
-    /*--CSS3 Rounded Corners--*/
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    width: 400px;
-    height: 800px;
-
+    width: 100%;
 }
 
 table {
-    font-family: Arial, sans-serif;
     width: 100%;
-    background: #fff;
     text-align: left;
     border-spacing: 0px;
-    border: 1px solid #aeb3b6;
+    border: 1px solid #000000;
     border-collapse: collapse;
-    /*--CSS3 Box Shadows--*/
-    -webkit-box-shadow: 0px 3px 7px #000;
-    -moz-box-shadow: 0px 3px 7px #000;
-    box-shadow: 0px 3px 7px #000;
-
 }
 
 .feedTitle {
@@ -50,8 +35,8 @@ table {
 }
 
 th {
-    border-left: 1px solid #aeb3b6;
-    border-right: 1px solid #aeb3b6;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
     background-color: #dbdbdb;
     text-align: right;
     height: 10px;
@@ -60,8 +45,8 @@ th {
 }
 
 td {
-    border-left: 1px solid #aeb3b6;
-    border-right: 1px solid #aeb3b6;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
     padding: 10px 10px;
     text-align: right;
     height: 10px;
@@ -75,13 +60,13 @@ td.green {
 
 .stockTable {
     font-size: 14px;
-    border-color: #44687d;
+    border-color: #000000;
     border-bottom-width: 1px solid;
 }
 
 .stockTable th {
     color: #ffffff;
-    background-color: #ff5113;
+    background-color: #744c8a;
     border-color: #cccccc;
     border-width: 0px 1px 1px 0px;
     border-style: solid;
@@ -90,8 +75,8 @@ td.green {
 
 .stockTable tr td {
     height: 22px;
-    border-color: #cccccc;
-    border-width: 0px 0px 1px 0px;
+    border-color: #000000;
+    border-width: 1px;
     border-style: solid;
 }
 
@@ -219,7 +204,7 @@ td.green {
 
 .change {
     text-align: right;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 .high {
@@ -239,23 +224,23 @@ td.green {
 }
 
 .upChange {
-    background: url(/images/stock_index_up.jpg) center left no-repeat;
+    background: url(../images/stock_index_up.png) center no-repeat;
     background-size: 10px;
     position: relative;
     font-weight: bold;
     color: green;
     text-align: right;
-    padding-right: 10px;
+    padding: 10px;
 }
 
 .downChange {
-    background: url(/images/stock_index_down.jpg) center left no-repeat;
+    background: url(../images/stock_index_down.png) center no-repeat;
     background-size: 10px;
     position: relative;
     font-weight: bold;
     color: red;
     text-align: right;
-    padding-right: 10px;
+    padding: 10px;
 }
 
 .upPercent {
@@ -271,3 +256,9 @@ td.green {
     text-align: right;
     padding-right: 10px;
 }
+
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+  background-color: #744c8a;
+  color:#eeeeee;
+}
+
