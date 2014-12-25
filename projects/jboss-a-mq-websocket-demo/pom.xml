@@ -8,11 +8,11 @@
     <name>JBoss A-MQ Websocket Project</name>
 
     <properties>
-        <activemq-version>5.7.0</activemq-version>
-        <slf4j-version>1.6.4</slf4j-version>
-        <log4j-version>1.2.16</log4j-version>
+        <activemq-version>5.9.0.redhat-610379</activemq-version>
+        <slf4j-version>1.7.7</slf4j-version>
+        <log4j-version>1.2.17</log4j-version>
 
-        <jetty-maven-plugin.version>7.5.4.v20111024</jetty-maven-plugin.version>
+        <jetty-maven-plugin.version>9.2.2.v20140723</jetty-maven-plugin.version>
     </properties>
 
     <modules>
@@ -23,7 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-core</artifactId>
+            <artifactId>activemq-all</artifactId>
             <version>${activemq-version}</version>
         </dependency>
         <dependency>
@@ -34,37 +34,51 @@
     </dependencies>
 
     <repositories>
-        <repository>
-            <id>fuse-releases</id>
-            <url>http://repo.fusesource.com/nexus/content/repositories/releases/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>central</id>
-            <url>http://repo1.maven.org/maven2/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>fuse-releases</id>
-            <url>http://repo.fusesource.com/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+    <repository>
+      <id>central</id>
+      <url>http://repo1.maven.org/maven2/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>fuse-releases</id>
+      <url>http://repo.fusesource.com/nexus/content/repositories/releases/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>central</id>
+      <url>http://repo1.maven.org/maven2/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>fuse-releases</id>
+      <url>http://repo.fusesource.com/nexus/content/repositories/releases/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>fuse-public</id>
+      <url>http://repo.fusesource.com/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
 </project>

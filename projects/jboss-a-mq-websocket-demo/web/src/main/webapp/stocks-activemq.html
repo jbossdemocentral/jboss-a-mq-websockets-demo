@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Stock Quote Example Using Stomp Over WebSocket</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    <script type="text/javascript" src="js/jquery-1.7.2-min.js"></script>
-    <script src='js/stomp.js'></script>
-    <script src='js/stock-quote.js'></script>
-    <script>
-        $(document).ready(function() {
-            var supported = ("WebSocket" in window);
-            if (!supported) {
-                var msg = "Your browser does not support Web Sockets. This example will not work properly.<br>";
-                msg += "Please use a Web Browser with Web Sockets support (WebKit or Google Chrome).";
-                $("#connect").html(msg);
-            }
-        });
-    </script>
-</head>
+    <head>
+        <title>A-MQ Stock Quote Example Using Stomp Over WebSockets</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script src='js/stomp.js'></script>
+        <script src='js/bootstrap.min.js'></script>
+        <script src='js/stock-quote.js'></script>
+        <script>
+            $(document).ready(function() {
+                var supported = ("WebSocket" in window);
+                if (!supported) {
+                    var msg = "Your browser does not support Web Sockets. This example will not work properly.<br>";
+                    msg += "Please use a Web Browser with Web Sockets support (WebKit or Google Chrome).";
+                    $("#connect").html(msg);
+                }
+            });
+        </script>
+    </head>
 
-<body style="background-color:transparent">
-<div id='connect'>
-    <form id='connect_form'>
-        <dl>
-            <dt><label for=connect_url>Server URL</label></dt>
-            <dd><input name=url id='connect_url' value='ws://localhost:61614/stomp' size="50"></dd>
-            <dt><label for=connect_login>Login</label></dt>
-            <dd><input id='connect_login' placeholder="User Login" value="guest"></dd>
-            <dt><label for=connect_passcode>Password</label></dt>
-            <dd><input id='connect_passcode' type=password placeholder="User Password" value="password33"></dd>
-            <dt><label for=destinationQuotes>Destination - Stock Quotes</label></dt>
-            <dd><input id='destinationQuotes' placeholder="Destination Quotes" value="/topic/stockQuoteTopic" size="50"></dd>
-            <dt>&nbsp;</dt>
-            <dd><input type=submit id='connect_submit' value="Connect"></dd>
-        </dl>
-    </form>
-</div>
-<div id="disconnect">
-    <form id='disconnect_form'>
-        <input type=submit id='disconnect_submit' value="Disconnect">
-    </form>
-</div>
+    <body style="background-color:transparent">
 
+    <div class="page-header">
+        <h2>A-MQ Stock Quote Example Using Stomp Over WebSockets</h2>
+    </div>
 
-<div class="main">
-    <p style="padding-bottom: 22px;"><b>Stock prices</b></p>
+    <div id="connect" class="jumbotron">
+        <form class="form-horizontal" role="form" id="connect_form">
+            <div class="form-group">
+                <label for="connect_url" class="col-sm-2 control-label">Server URL</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="connect_url" placeholder="Server URL - e.g. ws://localhost:61614/stomp" value="ws://localhost:61614/stomp" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="connect_login" class="col-sm-2 control-label">Login</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="connect_login" placeholder="User" value="guest" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="connect_passcode" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="connect_passcode" placeholder="Password" value="password" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="destinationQuotes" class="col-sm-2 control-label">Destination</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="destinationQuotes" placeholder="Destination - Stock Quotes" value="/topic/stockQuoteTopic" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" id="connect_submit" class="btn btn-primary">Connect</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
-    <table id="stockTable" class="stockTable" cellSpacing="0" >
-        <thead>
-        <tr>
-            <th class="symbol" width="60%">Symbol</th>
-            <th class="open" width="100px">Open</th>
-            <th class="last" width="120px">Last</th>
-            <th class="change" width="120px">Change</th>
-            <th class="high" width="120px">High</th>
-            <th class="low" width="120px">Low</th>
-            <th class="percent" width="120px">% Percent</th>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-</div>
+    <div id="disconnect" class="text-right">
+        <input type="submit" class="btn btn-warning" id="disconnect_submit" value="Disconnect">
+        <br /><br />
+    </div>
 
-</body>
+    <div class="main">
+        <p style="padding-bottom: 10px;"><h3>Stock prices</h3></p>
+        <table class="table table-striped table-bordered table-hover" id="stockTable">
+            <thead>
+                <tr>
+                    <th class="symbol">Symbol</th>
+                    <th class="open">Open</th>
+                    <th class="last">Last</th>
+                    <th class="change">Change</th>
+                    <th class="high">High</th>
+                    <th class="low">Low</th>
+                    <th class="percent">% Percent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- the blank row below is required, as otherwise bootstrap is not able to style the hover properly if all the rows are dynamically created -->
+                <tr/>
+            </tbody>
+        </table>
+    </div>
+
+    </body>
 </html>
-

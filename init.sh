@@ -1,8 +1,8 @@
 #!/bin/sh 
 DEMO="JBoss A-MQ Websocket Demo"
-VERSION=6.0.0
-AMQ=jboss-a-mq-6.0
-AMQ_BIN=jboss-a-mq-6.0.0.GA.zip
+VERSION=6.1.0
+AMQ=jboss-a-mq-6.1.0.redhat-379
+AMQ_BIN=jboss-a-mq-6.1.0.redhat-379.zip
 DEMO_HOME=./target
 AMQ_HOME=$DEMO_HOME/$AMQ
 SERVER_CONF=$AMQ_HOME/etc

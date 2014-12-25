@@ -2,7 +2,10 @@ $(document).ready(function() {
 
     var client, destinationQuotes;
 
-    $('#connect_form').submit(function() {
+    $('#disconnect').fadeOut();
+    $('.main').fadeOut();
+
+    $('#connect_submit').click(function() {
         var url = $("#connect_url").val();
         var login = $("#connect_login").val();
         var passcode = $("#connect_passcode").val();
@@ -19,6 +22,7 @@ $(document).ready(function() {
             client.debug("connected to Stomp");
             $('#connect').fadeOut({ duration: 'fast' });
             $('#disconnect').fadeIn();
+            $('.main').fadeIn();
             $('#send_form_input').removeAttr('disabled');
 
             var stockTable = document.getElementById("stockTable");
@@ -105,9 +109,10 @@ $(document).ready(function() {
         return false;
     });
 
-    $('#disconnect_form').submit(function() {
+    $('#disconnect_submit').click(function() {
         client.disconnect(function() {
             $('#disconnect').fadeOut({ duration: 'fast' });
+            $('.main').fadeOut();
             $('#connect').fadeIn();
             $('#send_form_input').addAttr('disabled');
         });
