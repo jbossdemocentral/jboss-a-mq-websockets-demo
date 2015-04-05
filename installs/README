@@ -1,10 +1,17 @@
-Download the following from the JBoss Customer Portal
+This directory is a staging area for a fresh installation of JBoss A-MQ from the web. Please follow these instructions before running the init.sh script in the directory above. 
 
- * JBoss A-MQ (jboss-a-mq-6.0.0.GA.zip)
+(1) Download JBoss A-MQ from the JBoss Customer Portal and copy to this directory (installs). As of this writing the current version is
 
-and copy to this directory for the init.sh script to work.
+  * jboss-a-mq-6.1.0.redhat-379.zip
 
-Ensure that this file is executable by running:
+(2) Change permissions on the downloaded file to make it executable by running the following (change based on your downloaded version):
 
-chmod +x <path-to-project>/installs/jboss-a-mq-6.0.0.GA.zip
+    chmod +x <path-to-project>/installs/jboss-a-mq-6.1.0.redhat-379.zip.
+
+(3) Update the init.sh to match the downloaded file by changing changing the version number. For example, if the current version number 6.1.0.redhat-720, then change the following:
+
+  * old VERSION=6.1.0.redhat-379
+
+  * new VERSION=6.1.0.redhat-720
+
 
