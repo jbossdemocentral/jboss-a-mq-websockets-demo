@@ -6,47 +6,27 @@ Demo based on JBoss A-MQ product.
 Setup and Configuration
 -----------------------
 
-See Quick Start Guide in project as ODT and PDF for details on installation. For those that can't wait:
+- carefully review the README file in the 'installs' directory because you'll need to tell the init.sh script what version of A-MQ you are using. The current version, as of the last time this file was updated, was jboss-a-mq-6.1.0.redhat-379; if the version you download and deploy to the intalls directory is different, you'll need to make the changes outlined in that file.
 
-- see README in 'installs' directory
+- run 'init.sh' and review the output for any errors
 
-- add product 
-
-- run 'init.sh' & read output
-
-- read Quick Start Guide (coming soon).
-
-- setup JBDS for project import, add jboss-a-mq server (coming soon).
-
-- import projects
-
-- start JBoss a-mq using the shell or .bat script under bin directory bin/a-mq
-
-              _ ____                                __  __  ____
-             | |  _ \                    /\        |  \/  |/ __ \
-             | | |_) | ___  ___ ___     /  \ ______| \  / | |  | |
-         _   | |  _ < / _ \/ __/ __|   / /\ \______| |\/| | |  | |
-        | |__| | |_) | (_) \__ \__ \  / ____ \     | |  | | |__| |
-         \____/|____/ \___/|___/___/ /_/    \_\    |_|  |_|\___\_\
-
-         JBoss A-MQ (6.0.0.redhat-009)
-         http://fusesource.com/products/fuse-mq-enterprise/
-
-       Hit '<tab>' for a list of available commands
-       and '[cmd] --help' for help on a specific command.
-       Hit '<ctrl-d>' or 'osgi:shutdown' to shutdown JBoss A-MQ.
-
-       JBossA-MQ:karaf@root>
+- start JBoss a-mq using the shell command amq or .bat script under bin directory target/jboss-a-mq-6.1.0.redhat-379/bin
 
 - when the JBoss-AMQ console appears, install the activemq-websocket war file. This war file contains the web project and stomp javascript clients used to open communication between the web browser and websocket server running in JBoss A-MQ.
 
     JBossA-MQ:karaf@root>install -s war:mvn:org.jboss.amq.examples.websocket/web/1.0/war\?Web-ContextPath=activemq-websocket
 
-- start Feeder application, which will populate randomly data (stock prices) and publish them in a topic which is the  topic used by websocket to expose the date to the web browser. You will find this in the 'support' directory.
+- start Feeder application, which will populate randomly data (stock prices) and publish them in a topic which is the topic used by websocket to expose the date to the web browser. You will find this in the 'support' directory.
 
     start_feeder.sh
 
 - open your web browser and point to the following URL:  http://localhost:8181/activemq-websocket/stocks-activemq.html
+
+- if you want to run a standalone web server instead instead, you can run the following command from the 'support' directory:
+
+   start_client.sh
+   
+   open your browser and navigate to http://localhost:8282/stocks-activemq.html
 
 - click on connect button, login is 'guest':'password'
 
